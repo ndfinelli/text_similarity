@@ -17,6 +17,7 @@ def index():
 @app.route('/text_similarity_comparison', methods=['POST'])
 def text_similarity_comparison():
     # We are able to assume that the request is a json dictionary coming in.
+    # This should be changed in the future to prevent failure if given bad input
     texts = json.loads(request.data)['texts']
 
     compare = TextSimilarity(texts[0], texts[1])

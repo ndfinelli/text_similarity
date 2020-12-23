@@ -19,5 +19,12 @@ if __name__ == "__main__":
 
     headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
     response = requests.post('http://localhost:5000/text_similarity_comparison', data=json.dumps(data), headers=headers)
+    print("Text Comparison Samples 1 & 2: " + response.text)
 
-    print(response.text)
+    data = {'texts': [sample1, sample3]}
+    response = requests.post('http://localhost:5000/text_similarity_comparison', data=json.dumps(data), headers=headers)
+    print("Text Comparison Samples 1 & 3: " + response.text)
+
+    data = {'texts': [sample2, sample3]}
+    response = requests.post('http://localhost:5000/text_similarity_comparison', data=json.dumps(data), headers=headers)
+    print("Text Comparison Samples 2 & 3: " + response.text)
