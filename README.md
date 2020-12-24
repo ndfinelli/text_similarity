@@ -76,7 +76,7 @@ If you don't have docker installed and don't want to go through the steps of ins
 
 To do any of the following steps you first must ensure that you have gone through all the steps in [Python Evironment](#1.-python-environment) of this document.
 
-Once you have pip installed, created a virtual environment, and have installed all the dependencies running the flask server is fairly easy.
+Once you have pip installed, have created a virtual environment, and have installed all the dependencies running the flask server is fairly easy.
 All you need to do is run the command
 
     python -m server.main
@@ -84,12 +84,12 @@ All you need to do is run the command
 This should start the flask server and you should see output similar to 
 
     Nico:text_similarity nicofinelli$ python -m server.main
- * Serving Flask app "main" (lazy loading)
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+    * Serving Flask app "main" (lazy loading)
+    * Environment: production
+      WARNING: This is a development server. Do not use it in a production deployment.
+      Use a production WSGI server instead.
+    * Debug mode: off
+    * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 
  The model should be running and if you navigate to http://0.0.0.0:5000/ you should see a web page with the text Text Similarity Comparision Server
 
@@ -101,3 +101,5 @@ To test this model without installing Python and all of the dependencies you sho
 To utilize this repository's tests all you must do is enter the command
 
     python -m model.test_endpoint
+    
+After running this command you should see the the output comparing all the sample texts that were provided in data section of this repository.
