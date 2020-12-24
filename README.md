@@ -13,7 +13,7 @@ This solution is meant to take in as inputs two texts and uses a metric to deter
 
 # Installation and Running Steps
 This section of the document will walk you through installing and running the project.
-Before doing anything else, you should clone this repository and then navigate to the correct directory.
+Before doing anything else, you should clone this repository and then navigate to the correct directory where this repository was cloned.
 
 ## 1. Python Environment
   This section of the document is unnecessary if you want to run the Docker Container and don't want to use the testing capabilities of this repository.
@@ -27,7 +27,7 @@ Before doing anything else, you should clone this repository and then navigate t
   If a version is shown after running this command it means python is installed on your machine. Otherwise, you should follow this tutorial to install python https://realpython.com/installing-python/
 
 ### 1.2 Installing Pip
-Next, we will want to ensure that pip is installed on your machine.
+Next, we will want to ensure that pip is installed and has been updated recently on your machine.
 If you are unsure if pip is installed on your machine run 
 
     python -m pip --version
@@ -67,9 +67,8 @@ To run this docker image you should run
 
     docker run -d -p 5000:5000 ndfinelli/text-similarity-flask-app
 
-This will start the Flask server on localhost port 5000
-The flask server only accepts data as JSON with the format of {texts: [text1, text2]}
-and will respond with the similarity score as a string.
+The sever should be running and if you navigate to http://0.0.0.0:5000/ you should see a web page with the text Text Similarity Comparision Server.
+If this is the case you can head to [4 Testing and Using the model](#4-testing-and-using-the-model)
 
 ## 3 Running the flask app without Docker
 If you don't have docker installed and don't want to go through the steps of installing it below are the steps needed to run the flask server without it.
